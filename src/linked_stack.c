@@ -4,6 +4,7 @@
 #include "../Includes/linked_stack.h"
 
 
+// Prints List seperated by =>  X :: Y
 void peek(struct node_t *head) {
     struct node_t *temp = head;
     printf("\n");
@@ -20,6 +21,7 @@ void peek(struct node_t *head) {
 }
 
 
+// Only used by the push method, used doesnt need to touch this
 struct node_t *create_node(struct token_t token) {
     struct node_t *temp = malloc(sizeof(struct node_t));
     temp->token = token;
@@ -28,6 +30,7 @@ struct node_t *create_node(struct token_t token) {
 }
 
 
+// Creates a new node and only pushes it to the lists head
 struct node_t *push(struct token_t token, struct node_t **head) {
     struct node_t *new = create_node(token);
     new->next = *head;
@@ -36,6 +39,7 @@ struct node_t *push(struct token_t token, struct node_t **head) {
 }
 
 
+// reverses a linked list through pointers
 void reverse(struct node_t **head) {
     struct node_t *prev = NULL;
     struct node_t *current = *head;
@@ -55,6 +59,7 @@ void reverse(struct node_t **head) {
 }
 
 
+// pops and returns the token_t from the lists head
 struct token_t pop(struct node_t **head) {
     struct token_t popped = (*head)->token;
     *head = (*head)->next;
