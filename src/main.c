@@ -29,15 +29,13 @@ int main(int argc, char *argv[]) {
     peek(out_stack);
 
     // Pushing the output stack to an output file
-    printf("Pushing the Output stack to a file named \"output.txt\"\n");
     push_to_file(out_stack);
 
     // Comparing the output to the desred answer
-    printf("Comparing the output to the desired answer.....\n");
     if (check_answer(input) == -1) {
         printf("Answers file could not be opened, nothing to compare to\n");
     } else if (is_expression && check_answer(input)) {
-        printf("The Answer is correct :)\n");
+        printf("The Answer is correct :)\n\n");
     } else if (is_expression && !check_answer(input)){
         printf("The Answer was incorrect :(\n");
     }

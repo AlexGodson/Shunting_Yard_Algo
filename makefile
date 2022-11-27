@@ -19,6 +19,13 @@ $(_OBJ)/%.o: $(_SRC)/%.c
 run: $(OUT)
 	./$(OUT)
 
+test: $(OUT)
+	./$(OUT) "P_1.txt"
+	./$(OUT) "P_2.txt"
+	./$(OUT) "P_3.txt"
+	./$(OUT) "P_4.txt"
+	./$(OUT) "P_5.txt"
+
 clear:
 	rm $(OBJ)*
 	rm $(OUT)
