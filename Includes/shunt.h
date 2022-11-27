@@ -12,8 +12,6 @@
 #define TRUE  1
 #define FALSE 0
 
-struct token_t;
-
 struct operator_t {
     int op;
     int prec;
